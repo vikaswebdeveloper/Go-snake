@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.background {
+  background: linear-gradient(
+    rgb(40, 212, 146),
+    rgb(60, 208, 235),
+    rgb(173, 87, 223),
+    rgb(59, 128, 218)
+  );
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box {
+  position: absolute;
+  display: flex;
+  top: 0.5rem;
+  right: 5rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#scoreBox {
+  font-size: 40px;
+  color: black;
+  font-weight: bolder;
+}
+
+#highScoreBox {
+  font-size: 40px;
+  color: black;
+  font-weight: bolder;
+}
+
+#board {
+  height: 90vmin;
+  width: 90vmin;
+  background: linear-gradient(rgb(0, 255, 242), rgb(100, 199, 216));
+  border: 2px solid black;
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+}
+
+.head {
+  border-radius: 5px;
+  background-image: url('snake\ head.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headLeft {
+  border-radius: 5px;
+  background-image: url('snake\ head.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(90deg);
+}
+
+.headRight {
+  border-radius: 5px;
+  background-image: url('snake\ head.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(270deg);
+}
+
+.headUp {
+  border-radius: 5px;
+  background-image: url('snake\ head.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(180deg);
+}
+
+.middle {
+  background-color: green;
+  border-radius: 5px;
+}
+
+.food {
+  background: linear-gradient(blue, black);
+  background-color: blue;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+.controller {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .controller {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .controller {
+    padding-top: 1rem;
+  }
+
+  .upper-button {
+    padding: 1rem;
+  }
+
+  .down {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .controller-btn {
+    padding: 0.4rem;
+    font-weight: bolder;
+    font-size: medium;
+    border-radius: 10px;
+    border: 2px solid black;
+  }
+
+  .lower-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
