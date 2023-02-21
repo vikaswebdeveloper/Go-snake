@@ -40,7 +40,7 @@ function isCollide(snake) {
 
 function gameEngine() {
 
-    // gameSound.play();
+    gameSound.play();
 
     if (isCollide(snakeArr)) {
         gameOverSound.play();
